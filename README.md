@@ -1,3 +1,7 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/railroad-is-not-a-train-saliency-as-pseudo-1/weakly-supervised-semantic-segmentation-on-4)](https://paperswithcode.com/sota/weakly-supervised-semantic-segmentation-on-4?p=railroad-is-not-a-train-saliency-as-pseudo-1)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/railroad-is-not-a-train-saliency-as-pseudo-1/weakly-supervised-semantic-segmentation-on)](https://paperswithcode.com/sota/weakly-supervised-semantic-segmentation-on?p=railroad-is-not-a-train-saliency-as-pseudo-1)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/railroad-is-not-a-train-saliency-as-pseudo-1/weakly-supervised-semantic-segmentation-on-1)](https://paperswithcode.com/sota/weakly-supervised-semantic-segmentation-on-1?p=railroad-is-not-a-train-saliency-as-pseudo-1)
+
 ## Railroad is not a Train: Saliency as Pseudo-pxiel Supervision for Weakly Supervised Semantic Segmentation (CVPR 2021)
 
 [CVPR 2021 peper](https://openaccess.thecvf.com/content/CVPR2021/html/Lee_Railroad_Is_Not_a_Train_Saliency_As_Pseudo-Pixel_Supervision_for_CVPR_2021_paper.html)
@@ -8,6 +12,7 @@ Seungho Lee<sup>1,* </sup>, Minhyun Lee<sup>1,*</sup>, Jongwuk Lee<sup>2</sup>, 
 
 <sup>1</sup> <sub>School of Integrated Technology, Yonsei University</sub>  
 <sup>2</sup> <sub>Department of Computer Science of Engineering, Sungkyunkwan University</sub>  
+
 
 
 
