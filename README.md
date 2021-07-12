@@ -44,7 +44,7 @@ thereby significantly improving the quality of pseudo-masks.
 - Python 3.6
 - Pytorch >= 1.0.0
 - Torchvision >= 0.2.2
-- PIL
+- Pillow
 - opencv-python (opencv for Python)
 
 
