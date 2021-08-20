@@ -38,6 +38,10 @@ thereby significantly improving the quality of pseudo-masks.
 
 12 Jul, 2021: Initial upload
 
+19 Aug, 2021: Minor update on information about dCRF and the pre-trained model of the segmentation networks
+
+- Please see thse issuses: [dCRF](https://github.com/halbielee/EPS/issues/5) and [pre-trained model](https://github.com/halbielee/EPS/issues/4)
+
 ## Installation
 
 
@@ -77,11 +81,19 @@ thereby significantly improving the quality of pseudo-masks.
     ```
 - We provide trained model for EPS. 
   - [ResNet38 w/ EPS](https://drive.google.com/file/d/1BmJBt66_9WU24sTGlK_jNnHTwaNaCKt0/view?usp=sharing)
-    
+
+- dCRF hyper-parameters
+  - We did not use dCRF for our pseudo-masks, but only used for the comparision in the paper.
+  - We chose the hyper-parameters for dCRF used in ResNet101-based DeepLabV2 among other candidates([OAA](https://github.com/PengtaoJiang/OAA), and [PSA](https://github.com/jiwoon-ahn/psa))
+  - Please see [the official deeplab website](http://liangchiehchen.com/projects/DeepLabv2_resnet.html) for information
+  ```
+  CRF parameters: bi_w = 4, bi_xy_std = 67, bi_rgb_std = 3, pos_w = 3, pos_xy_std = 1.
+  ```
 ### Segmentation network
 - We utilize [DeepLab-V2](https://arxiv.org/abs/1606.00915) 
   for the segmentation network. 
-  Please see [deeplab-pytorch](https://github.com/kazuto1011/deeplab-pytorch).
+- Please see [deeplab-pytorch](https://github.com/kazuto1011/deeplab-pytorch) for the implementation in PyTorch.
+- We used the pretrained model for VGG16 based network from [DeepLab official](http://liangchiehchen.com/projects/DeepLab_Models.html) and for ResNet101-based network from [OAA official](https://github.com/PengtaoJiang/OAA).
   
 ## Results
 
