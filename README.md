@@ -4,7 +4,7 @@
 
 ## Railroad is not a Train: Saliency as Pseudo-pxiel Supervision for Weakly Supervised Semantic Segmentation (CVPR 2021)
 
-[CVPR 2021 peper](https://openaccess.thecvf.com/content/CVPR2021/html/Lee_Railroad_Is_Not_a_Train_Saliency_As_Pseudo-Pixel_Supervision_for_CVPR_2021_paper.html)
+[CVPR 2021 paper](https://openaccess.thecvf.com/content/CVPR2021/html/Lee_Railroad_Is_Not_a_Train_Saliency_As_Pseudo-Pixel_Supervision_for_CVPR_2021_paper.html)
 
 Seungho Lee<sup>1,* </sup>, Minhyun Lee<sup>1,*</sup>, Jongwuk Lee<sup>2</sup>, Hyunjung Shim<sup>1</sup>
 
