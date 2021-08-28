@@ -98,7 +98,7 @@ thereby significantly improving the quality of pseudo-masks.
     ```
 - We provide the performance of the pseudo-masks and trained models.
 
-  | Dataset         | METHOD | Train(mIoU) | Checkpoint                                                   | Log                                    |
+  | Dataset         | METHOD | Train(mIoU) | Checkpoint                                                   | Training log                        |
   | --------------- | ------ | ----------- | ------------------------------------------------------------ | -------------------------------------- |
   | PASCAL VOC 2012 | Base   | 47.05       | [Download](https://drive.google.com/file/d/1dO4ZKerN6MMFLjaDw0TV_h7ZUOxRQvdq/view?usp=sharing)                                                 | [voc12_cls.log](log/log_voc12_cls.log) |
   | PASCAL VOC 2012 | EPS    | 69.22       | [Download](https://drive.google.com/file/d/1f3iVGRt2nH8BMxEP-w6VoJANouoHNLYM/view?usp=sharing)                                                 | [voc12_eps.log](log/log_voc12_eps.log) |
