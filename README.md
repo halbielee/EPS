@@ -63,21 +63,19 @@ thereby significantly improving the quality of pseudo-masks.
 - PASCAL VOC 2012
     - [Images](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) 
     - [Saliency maps](https://drive.google.com/file/d/19AjSmgdMlIZH4FXVZ5zjlUZcoZZCkwrI/view?usp=sharing) 
-      from [PFAN](https://arxiv.org/abs/1903.00179)
+      using [PFAN](https://arxiv.org/abs/1903.00179)
 
 - MS-COCO 2014
     - [Images](https://cocodataset.org/#home) 
     - [Saliency maps](https://drive.google.com/file/d/1o50oztQqTc_xZdgpIEvgKD2Xi_HqBFig/view?usp=sharing) 
-      from [PFAN](https://arxiv.org/abs/1903.00179)
+      using [PFAN](https://arxiv.org/abs/1903.00179)
     - [Segmentation masks](https://drive.google.com/file/d/16wuPinx0rdIP_PO0uYeCn9rfX2-evc-S/view?usp=sharing)
 
 - Pretrained models
     - [ImageNet-pretrained Model](https://drive.google.com/file/d/15F13LEL5aO45JU-j45PYjzv5KW5bn_Pn/view?usp=sharing) 
       for [ResNet38](https://arxiv.org/abs/1611.10080)
 
-
-
-
+      
 
 ### Classification network  
 - Execute the bash file for training, inference and evaluation.
@@ -96,7 +94,9 @@ thereby significantly improving the quality of pseudo-masks.
     # EPS
     bash script/coco_eps.sh  
     ```
-- We provide the performance of the pseudo-masks and trained models.
+- We provide checkpoints, training logs, and performances for each method and each dataset.
+
+  Please see the details from the script files.
 
   | Dataset         | METHOD | Train(mIoU) | Checkpoint                                                   | Training log                        |
   | --------------- | ------ | ----------- | ------------------------------------------------------------ | -------------------------------------- |
@@ -104,7 +104,6 @@ thereby significantly improving the quality of pseudo-masks.
   | PASCAL VOC 2012 | EPS    | 69.22       | [Download](https://drive.google.com/file/d/1f3iVGRt2nH8BMxEP-w6VoJANouoHNLYM/view?usp=sharing)                                                 | [voc12_eps.log](log/log_voc12_eps.log) |
   | MS-COCO 2014    | Base   | 31.23       | [Download](https://drive.google.com/file/d/19ZCJbk15WiHBLK5-smJmVp-tXAw4UFRU/view?usp=sharing) | [coco_cls.log](log/log_coco_cls.log)   |
   | MS-COCO 2014    | EPS    | 37.15       | [Download](https://drive.google.com/file/d/1D9dDj2_oR_aLUWpex2HL3o80zbGpk7Vp/view?usp=sharing) | [coco_eps.log](log/log_coco_eps.log)   |
-
 
 
 - dCRF hyper-parameters
