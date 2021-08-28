@@ -1,5 +1,6 @@
 import sys
 import time
+import datetime
 
 
 class Logger(object):
@@ -45,10 +46,9 @@ class AverageMeter:
 
 
 class Timer:
-    def __init__(self, starting_msg = None):
+    def __init__(self, starting_msg=None):
         self.start = time.time()
         self.stage_start = self.start
-
         if starting_msg is not None:
             print(starting_msg, time.ctime(time.time()))
 
@@ -66,3 +66,6 @@ class Timer:
 
     def reset_stage(self):
         self.stage_start = time.time()
+
+    def get_est_remain(self):
+        return str(datetime.timedelta(seconds=int(self.est_remaining)))

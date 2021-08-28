@@ -1,0 +1,402 @@
+{'session': 'voc12_eps', 'data_root': '/dataset/PascalVOC/VOCdevkit/VOC2012//JPEGImages', 'dataset': 'voc12', 'saliency_root': '/dataset/PascalVOC/VOCdevkit/VOC2012/SALImages/SALImages_pyramid', 'train_list': 'metadata/voc12/train_aug.txt', 'save_root': '/log', 'batch_size': 8, 'crop_size': 448, 'resize_size': (256, 512), 'network': 'network.resnet38_eps', 'weights': 'pretrained/ilsvrc-cls_rna-a1_cls1000_ep-0001.params', 'lr': 0.01, 'num_workers': 8, 'wt_dec': 0.0005, 'max_iters': 20000, 'tau': 0.4, 'lam': 0.5, 'num_classes': 20, 'network_type': 'eps', 'log_folder': '/log/voc12_eps'}
+Session started:  Sat Aug 28 14:43:27 2021
+Iter:    0/20000 Loss_Cls:0.8649 Loss_Sal:0.2084 Rem:1 day, 5:47:32 lr: 0.0100
+Iter:   50/20000 Loss_Cls:0.2678 Loss_Sal:0.0836 Rem:4:06:58 lr: 0.0100
+Iter:  100/20000 Loss_Cls:0.2424 Loss_Sal:0.0591 Rem:3:52:33 lr: 0.0100
+Iter:  150/20000 Loss_Cls:0.2273 Loss_Sal:0.0534 Rem:3:47:16 lr: 0.0099
+Iter:  200/20000 Loss_Cls:0.2158 Loss_Sal:0.0511 Rem:3:44:20 lr: 0.0099
+Iter:  250/20000 Loss_Cls:0.2055 Loss_Sal:0.0482 Rem:3:42:24 lr: 0.0099
+Iter:  300/20000 Loss_Cls:0.1951 Loss_Sal:0.0473 Rem:3:40:55 lr: 0.0099
+Iter:  350/20000 Loss_Cls:0.1788 Loss_Sal:0.0476 Rem:3:39:42 lr: 0.0098
+Iter:  400/20000 Loss_Cls:0.1675 Loss_Sal:0.0498 Rem:3:38:40 lr: 0.0098
+Iter:  450/20000 Loss_Cls:0.1598 Loss_Sal:0.0485 Rem:3:37:44 lr: 0.0098
+Iter:  500/20000 Loss_Cls:0.1608 Loss_Sal:0.0525 Rem:3:36:52 lr: 0.0098
+Iter:  550/20000 Loss_Cls:0.1541 Loss_Sal:0.0513 Rem:3:36:04 lr: 0.0098
+Iter:  600/20000 Loss_Cls:0.1493 Loss_Sal:0.0483 Rem:3:35:18 lr: 0.0097
+Iter:  650/20000 Loss_Cls:0.1425 Loss_Sal:0.0497 Rem:3:34:34 lr: 0.0097
+Iter:  700/20000 Loss_Cls:0.1415 Loss_Sal:0.0488 Rem:3:33:53 lr: 0.0097
+Iter:  750/20000 Loss_Cls:0.1432 Loss_Sal:0.0493 Rem:3:33:12 lr: 0.0097
+Iter:  800/20000 Loss_Cls:0.1314 Loss_Sal:0.0532 Rem:3:32:32 lr: 0.0096
+Iter:  850/20000 Loss_Cls:0.1361 Loss_Sal:0.0479 Rem:3:31:53 lr: 0.0096
+Iter:  900/20000 Loss_Cls:0.1306 Loss_Sal:0.0486 Rem:3:31:15 lr: 0.0096
+Iter:  950/20000 Loss_Cls:0.1281 Loss_Sal:0.0469 Rem:3:30:37 lr: 0.0096
+Iter: 1000/20000 Loss_Cls:0.1210 Loss_Sal:0.0492 Rem:3:30:00 lr: 0.0095
+Iter: 1050/20000 Loss_Cls:0.1179 Loss_Sal:0.0454 Rem:3:29:23 lr: 0.0095
+Iter: 1100/20000 Loss_Cls:0.1149 Loss_Sal:0.0509 Rem:3:28:46 lr: 0.0095
+Iter: 1150/20000 Loss_Cls:0.1233 Loss_Sal:0.0497 Rem:3:28:10 lr: 0.0095
+Iter: 1200/20000 Loss_Cls:0.1212 Loss_Sal:0.0491 Rem:3:27:34 lr: 0.0095
+Iter: 1250/20000 Loss_Cls:0.1116 Loss_Sal:0.0496 Rem:3:26:59 lr: 0.0094
+Iter: 1300/20000 Loss_Cls:0.1153 Loss_Sal:0.0470 Rem:3:26:23 lr: 0.0094
+Iter: 1350/20000 Loss_Cls:0.1085 Loss_Sal:0.0458 Rem:3:25:52 lr: 0.0094
+Iter: 1400/20000 Loss_Cls:0.1131 Loss_Sal:0.0439 Rem:3:25:17 lr: 0.0094
+Iter: 1450/20000 Loss_Cls:0.1061 Loss_Sal:0.0452 Rem:3:24:42 lr: 0.0093
+Iter: 1500/20000 Loss_Cls:0.1146 Loss_Sal:0.0480 Rem:3:24:07 lr: 0.0093
+Iter: 1550/20000 Loss_Cls:0.1046 Loss_Sal:0.0476 Rem:3:23:32 lr: 0.0093
+Iter: 1600/20000 Loss_Cls:0.1070 Loss_Sal:0.0445 Rem:3:22:58 lr: 0.0093
+Iter: 1650/20000 Loss_Cls:0.1025 Loss_Sal:0.0453 Rem:3:22:24 lr: 0.0093
+Iter: 1700/20000 Loss_Cls:0.1020 Loss_Sal:0.0453 Rem:3:21:49 lr: 0.0092
+Iter: 1750/20000 Loss_Cls:0.0973 Loss_Sal:0.0465 Rem:3:21:15 lr: 0.0092
+Iter: 1800/20000 Loss_Cls:0.1008 Loss_Sal:0.0448 Rem:3:20:41 lr: 0.0092
+Iter: 1850/20000 Loss_Cls:0.0996 Loss_Sal:0.0464 Rem:3:20:07 lr: 0.0092
+Iter: 1900/20000 Loss_Cls:0.1032 Loss_Sal:0.0459 Rem:3:19:33 lr: 0.0091
+Iter: 1950/20000 Loss_Cls:0.1035 Loss_Sal:0.0442 Rem:3:18:59 lr: 0.0091
+Iter: 2000/20000 Loss_Cls:0.0963 Loss_Sal:0.0434 Rem:3:18:25 lr: 0.0091
+Iter: 2050/20000 Loss_Cls:0.1064 Loss_Sal:0.0438 Rem:3:17:51 lr: 0.0091
+Iter: 2100/20000 Loss_Cls:0.0934 Loss_Sal:0.0420 Rem:3:17:17 lr: 0.0090
+Iter: 2150/20000 Loss_Cls:0.1033 Loss_Sal:0.0459 Rem:3:16:43 lr: 0.0090
+Iter: 2200/20000 Loss_Cls:0.0953 Loss_Sal:0.0465 Rem:3:16:09 lr: 0.0090
+Iter: 2250/20000 Loss_Cls:0.0946 Loss_Sal:0.0471 Rem:3:15:35 lr: 0.0090
+Iter: 2300/20000 Loss_Cls:0.0894 Loss_Sal:0.0438 Rem:3:15:01 lr: 0.0090
+Iter: 2350/20000 Loss_Cls:0.0906 Loss_Sal:0.0438 Rem:3:14:28 lr: 0.0089
+Iter: 2400/20000 Loss_Cls:0.0934 Loss_Sal:0.0423 Rem:3:13:54 lr: 0.0089
+Iter: 2450/20000 Loss_Cls:0.0969 Loss_Sal:0.0430 Rem:3:13:20 lr: 0.0089
+Iter: 2500/20000 Loss_Cls:0.0972 Loss_Sal:0.0456 Rem:3:12:47 lr: 0.0089
+Iter: 2550/20000 Loss_Cls:0.0914 Loss_Sal:0.0440 Rem:3:12:13 lr: 0.0088
+Iter: 2600/20000 Loss_Cls:0.0975 Loss_Sal:0.0444 Rem:3:11:40 lr: 0.0088
+Iter: 2650/20000 Loss_Cls:0.0957 Loss_Sal:0.0400 Rem:3:11:09 lr: 0.0088
+Iter: 2700/20000 Loss_Cls:0.0960 Loss_Sal:0.0418 Rem:3:10:35 lr: 0.0088
+Iter: 2750/20000 Loss_Cls:0.0943 Loss_Sal:0.0407 Rem:3:10:01 lr: 0.0088
+Iter: 2800/20000 Loss_Cls:0.0801 Loss_Sal:0.0412 Rem:3:09:28 lr: 0.0087
+Iter: 2850/20000 Loss_Cls:0.0950 Loss_Sal:0.0458 Rem:3:08:54 lr: 0.0087
+Iter: 2900/20000 Loss_Cls:0.0897 Loss_Sal:0.0439 Rem:3:08:21 lr: 0.0087
+Iter: 2950/20000 Loss_Cls:0.0882 Loss_Sal:0.0412 Rem:3:07:47 lr: 0.0087
+Iter: 3000/20000 Loss_Cls:0.0914 Loss_Sal:0.0432 Rem:3:07:14 lr: 0.0086
+Iter: 3050/20000 Loss_Cls:0.0891 Loss_Sal:0.0441 Rem:3:06:40 lr: 0.0086
+Iter: 3100/20000 Loss_Cls:0.0845 Loss_Sal:0.0429 Rem:3:06:07 lr: 0.0086
+Iter: 3150/20000 Loss_Cls:0.0781 Loss_Sal:0.0438 Rem:3:05:33 lr: 0.0086
+Iter: 3200/20000 Loss_Cls:0.0787 Loss_Sal:0.0477 Rem:3:05:00 lr: 0.0085
+Iter: 3250/20000 Loss_Cls:0.0884 Loss_Sal:0.0416 Rem:3:04:26 lr: 0.0085
+Iter: 3300/20000 Loss_Cls:0.0919 Loss_Sal:0.0417 Rem:3:03:53 lr: 0.0085
+Iter: 3350/20000 Loss_Cls:0.0896 Loss_Sal:0.0395 Rem:3:03:19 lr: 0.0085
+Iter: 3400/20000 Loss_Cls:0.0857 Loss_Sal:0.0398 Rem:3:02:46 lr: 0.0085
+Iter: 3450/20000 Loss_Cls:0.0918 Loss_Sal:0.0401 Rem:3:02:13 lr: 0.0084
+Iter: 3500/20000 Loss_Cls:0.0818 Loss_Sal:0.0435 Rem:3:01:39 lr: 0.0084
+Iter: 3550/20000 Loss_Cls:0.0823 Loss_Sal:0.0391 Rem:3:01:06 lr: 0.0084
+Iter: 3600/20000 Loss_Cls:0.0808 Loss_Sal:0.0407 Rem:3:00:33 lr: 0.0084
+Iter: 3650/20000 Loss_Cls:0.0945 Loss_Sal:0.0401 Rem:2:59:59 lr: 0.0083
+Iter: 3700/20000 Loss_Cls:0.0876 Loss_Sal:0.0397 Rem:2:59:26 lr: 0.0083
+Iter: 3750/20000 Loss_Cls:0.0902 Loss_Sal:0.0425 Rem:2:58:52 lr: 0.0083
+Iter: 3800/20000 Loss_Cls:0.0843 Loss_Sal:0.0399 Rem:2:58:19 lr: 0.0083
+Iter: 3850/20000 Loss_Cls:0.0892 Loss_Sal:0.0399 Rem:2:57:46 lr: 0.0082
+Iter: 3900/20000 Loss_Cls:0.0787 Loss_Sal:0.0396 Rem:2:57:12 lr: 0.0082
+Iter: 3950/20000 Loss_Cls:0.0803 Loss_Sal:0.0427 Rem:2:56:39 lr: 0.0082
+Iter: 4000/20000 Loss_Cls:0.0766 Loss_Sal:0.0434 Rem:2:56:07 lr: 0.0082
+Iter: 4050/20000 Loss_Cls:0.0806 Loss_Sal:0.0382 Rem:2:55:34 lr: 0.0082
+Iter: 4100/20000 Loss_Cls:0.0799 Loss_Sal:0.0420 Rem:2:55:01 lr: 0.0081
+Iter: 4150/20000 Loss_Cls:0.0799 Loss_Sal:0.0433 Rem:2:54:28 lr: 0.0081
+Iter: 4200/20000 Loss_Cls:0.0742 Loss_Sal:0.0385 Rem:2:53:55 lr: 0.0081
+Iter: 4250/20000 Loss_Cls:0.0784 Loss_Sal:0.0394 Rem:2:53:21 lr: 0.0081
+Iter: 4300/20000 Loss_Cls:0.0871 Loss_Sal:0.0425 Rem:2:52:48 lr: 0.0080
+Iter: 4350/20000 Loss_Cls:0.0819 Loss_Sal:0.0405 Rem:2:52:15 lr: 0.0080
+Iter: 4400/20000 Loss_Cls:0.0816 Loss_Sal:0.0409 Rem:2:51:42 lr: 0.0080
+Iter: 4450/20000 Loss_Cls:0.0740 Loss_Sal:0.0397 Rem:2:51:09 lr: 0.0080
+Iter: 4500/20000 Loss_Cls:0.0783 Loss_Sal:0.0399 Rem:2:50:35 lr: 0.0080
+Iter: 4550/20000 Loss_Cls:0.0791 Loss_Sal:0.0383 Rem:2:50:02 lr: 0.0079
+Iter: 4600/20000 Loss_Cls:0.0826 Loss_Sal:0.0402 Rem:2:49:29 lr: 0.0079
+Iter: 4650/20000 Loss_Cls:0.0871 Loss_Sal:0.0413 Rem:2:48:56 lr: 0.0079
+Iter: 4700/20000 Loss_Cls:0.0785 Loss_Sal:0.0405 Rem:2:48:23 lr: 0.0079
+Iter: 4750/20000 Loss_Cls:0.0738 Loss_Sal:0.0409 Rem:2:47:49 lr: 0.0078
+Iter: 4800/20000 Loss_Cls:0.0866 Loss_Sal:0.0385 Rem:2:47:16 lr: 0.0078
+Iter: 4850/20000 Loss_Cls:0.0872 Loss_Sal:0.0404 Rem:2:46:43 lr: 0.0078
+Iter: 4900/20000 Loss_Cls:0.0788 Loss_Sal:0.0405 Rem:2:46:10 lr: 0.0078
+Iter: 4950/20000 Loss_Cls:0.0793 Loss_Sal:0.0399 Rem:2:45:37 lr: 0.0077
+Iter: 5000/20000 Loss_Cls:0.0762 Loss_Sal:0.0379 Rem:2:45:04 lr: 0.0077
+Iter: 5050/20000 Loss_Cls:0.0669 Loss_Sal:0.0407 Rem:2:44:30 lr: 0.0077
+Iter: 5100/20000 Loss_Cls:0.0864 Loss_Sal:0.0406 Rem:2:43:57 lr: 0.0077
+Iter: 5150/20000 Loss_Cls:0.0787 Loss_Sal:0.0407 Rem:2:43:24 lr: 0.0076
+Iter: 5200/20000 Loss_Cls:0.0701 Loss_Sal:0.0394 Rem:2:42:51 lr: 0.0076
+Iter: 5250/20000 Loss_Cls:0.0780 Loss_Sal:0.0414 Rem:2:42:18 lr: 0.0076
+Iter: 5300/20000 Loss_Cls:0.0757 Loss_Sal:0.0393 Rem:2:41:46 lr: 0.0076
+Iter: 5350/20000 Loss_Cls:0.0765 Loss_Sal:0.0414 Rem:2:41:13 lr: 0.0076
+Iter: 5400/20000 Loss_Cls:0.0782 Loss_Sal:0.0410 Rem:2:40:39 lr: 0.0075
+Iter: 5450/20000 Loss_Cls:0.0743 Loss_Sal:0.0373 Rem:2:40:06 lr: 0.0075
+Iter: 5500/20000 Loss_Cls:0.0762 Loss_Sal:0.0383 Rem:2:39:33 lr: 0.0075
+Iter: 5550/20000 Loss_Cls:0.0668 Loss_Sal:0.0392 Rem:2:39:00 lr: 0.0075
+Iter: 5600/20000 Loss_Cls:0.0785 Loss_Sal:0.0387 Rem:2:38:27 lr: 0.0074
+Iter: 5650/20000 Loss_Cls:0.0803 Loss_Sal:0.0369 Rem:2:37:54 lr: 0.0074
+Iter: 5700/20000 Loss_Cls:0.0732 Loss_Sal:0.0397 Rem:2:37:21 lr: 0.0074
+Iter: 5750/20000 Loss_Cls:0.0792 Loss_Sal:0.0383 Rem:2:36:48 lr: 0.0074
+Iter: 5800/20000 Loss_Cls:0.0809 Loss_Sal:0.0414 Rem:2:36:14 lr: 0.0073
+Iter: 5850/20000 Loss_Cls:0.0766 Loss_Sal:0.0394 Rem:2:35:41 lr: 0.0073
+Iter: 5900/20000 Loss_Cls:0.0821 Loss_Sal:0.0390 Rem:2:35:08 lr: 0.0073
+Iter: 5950/20000 Loss_Cls:0.0743 Loss_Sal:0.0383 Rem:2:34:35 lr: 0.0073
+Iter: 6000/20000 Loss_Cls:0.0812 Loss_Sal:0.0378 Rem:2:34:02 lr: 0.0073
+Iter: 6050/20000 Loss_Cls:0.0775 Loss_Sal:0.0373 Rem:2:33:29 lr: 0.0072
+Iter: 6100/20000 Loss_Cls:0.0745 Loss_Sal:0.0381 Rem:2:32:56 lr: 0.0072
+Iter: 6150/20000 Loss_Cls:0.0672 Loss_Sal:0.0383 Rem:2:32:23 lr: 0.0072
+Iter: 6200/20000 Loss_Cls:0.0815 Loss_Sal:0.0399 Rem:2:31:50 lr: 0.0072
+Iter: 6250/20000 Loss_Cls:0.0640 Loss_Sal:0.0391 Rem:2:31:16 lr: 0.0071
+Iter: 6300/20000 Loss_Cls:0.0683 Loss_Sal:0.0382 Rem:2:30:43 lr: 0.0071
+Iter: 6350/20000 Loss_Cls:0.0797 Loss_Sal:0.0387 Rem:2:30:10 lr: 0.0071
+Iter: 6400/20000 Loss_Cls:0.0669 Loss_Sal:0.0352 Rem:2:29:37 lr: 0.0071
+Iter: 6450/20000 Loss_Cls:0.0745 Loss_Sal:0.0412 Rem:2:29:04 lr: 0.0070
+Iter: 6500/20000 Loss_Cls:0.0728 Loss_Sal:0.0390 Rem:2:28:31 lr: 0.0070
+Iter: 6550/20000 Loss_Cls:0.0752 Loss_Sal:0.0378 Rem:2:27:58 lr: 0.0070
+Iter: 6600/20000 Loss_Cls:0.0766 Loss_Sal:0.0394 Rem:2:27:25 lr: 0.0070
+Iter: 6650/20000 Loss_Cls:0.0669 Loss_Sal:0.0384 Rem:2:26:52 lr: 0.0070
+Iter: 6700/20000 Loss_Cls:0.0658 Loss_Sal:0.0403 Rem:2:26:19 lr: 0.0069
+Iter: 6750/20000 Loss_Cls:0.0727 Loss_Sal:0.0360 Rem:2:25:46 lr: 0.0069
+Iter: 6800/20000 Loss_Cls:0.0683 Loss_Sal:0.0386 Rem:2:25:13 lr: 0.0069
+Iter: 6850/20000 Loss_Cls:0.0680 Loss_Sal:0.0406 Rem:2:24:40 lr: 0.0069
+Iter: 6900/20000 Loss_Cls:0.0629 Loss_Sal:0.0398 Rem:2:24:07 lr: 0.0068
+Iter: 6950/20000 Loss_Cls:0.0650 Loss_Sal:0.0371 Rem:2:23:34 lr: 0.0068
+Iter: 7000/20000 Loss_Cls:0.0658 Loss_Sal:0.0384 Rem:2:23:01 lr: 0.0068
+Iter: 7050/20000 Loss_Cls:0.0698 Loss_Sal:0.0385 Rem:2:22:28 lr: 0.0068
+Iter: 7100/20000 Loss_Cls:0.0740 Loss_Sal:0.0376 Rem:2:21:55 lr: 0.0067
+Iter: 7150/20000 Loss_Cls:0.0679 Loss_Sal:0.0380 Rem:2:21:22 lr: 0.0067
+Iter: 7200/20000 Loss_Cls:0.0779 Loss_Sal:0.0376 Rem:2:20:49 lr: 0.0067
+Iter: 7250/20000 Loss_Cls:0.0673 Loss_Sal:0.0397 Rem:2:20:16 lr: 0.0067
+Iter: 7300/20000 Loss_Cls:0.0714 Loss_Sal:0.0391 Rem:2:19:43 lr: 0.0066
+Iter: 7350/20000 Loss_Cls:0.0721 Loss_Sal:0.0378 Rem:2:19:10 lr: 0.0066
+Iter: 7400/20000 Loss_Cls:0.0706 Loss_Sal:0.0371 Rem:2:18:37 lr: 0.0066
+Iter: 7450/20000 Loss_Cls:0.0640 Loss_Sal:0.0344 Rem:2:18:04 lr: 0.0066
+Iter: 7500/20000 Loss_Cls:0.0667 Loss_Sal:0.0382 Rem:2:17:31 lr: 0.0066
+Iter: 7550/20000 Loss_Cls:0.0774 Loss_Sal:0.0367 Rem:2:16:57 lr: 0.0065
+Iter: 7600/20000 Loss_Cls:0.0717 Loss_Sal:0.0415 Rem:2:16:24 lr: 0.0065
+Iter: 7650/20000 Loss_Cls:0.0760 Loss_Sal:0.0383 Rem:2:15:51 lr: 0.0065
+Iter: 7700/20000 Loss_Cls:0.0658 Loss_Sal:0.0371 Rem:2:15:18 lr: 0.0065
+Iter: 7750/20000 Loss_Cls:0.0677 Loss_Sal:0.0362 Rem:2:14:45 lr: 0.0064
+Iter: 7800/20000 Loss_Cls:0.0653 Loss_Sal:0.0365 Rem:2:14:12 lr: 0.0064
+Iter: 7850/20000 Loss_Cls:0.0737 Loss_Sal:0.0366 Rem:2:13:39 lr: 0.0064
+Iter: 7900/20000 Loss_Cls:0.0786 Loss_Sal:0.0401 Rem:2:13:06 lr: 0.0064
+Iter: 7950/20000 Loss_Cls:0.0703 Loss_Sal:0.0384 Rem:2:12:34 lr: 0.0063
+Iter: 8000/20000 Loss_Cls:0.0567 Loss_Sal:0.0371 Rem:2:12:01 lr: 0.0063
+Iter: 8050/20000 Loss_Cls:0.0690 Loss_Sal:0.0380 Rem:2:11:28 lr: 0.0063
+Iter: 8100/20000 Loss_Cls:0.0603 Loss_Sal:0.0368 Rem:2:10:55 lr: 0.0063
+Iter: 8150/20000 Loss_Cls:0.0737 Loss_Sal:0.0386 Rem:2:10:22 lr: 0.0062
+Iter: 8200/20000 Loss_Cls:0.0663 Loss_Sal:0.0384 Rem:2:09:49 lr: 0.0062
+Iter: 8250/20000 Loss_Cls:0.0696 Loss_Sal:0.0377 Rem:2:09:16 lr: 0.0062
+Iter: 8300/20000 Loss_Cls:0.0691 Loss_Sal:0.0413 Rem:2:08:43 lr: 0.0062
+Iter: 8350/20000 Loss_Cls:0.0628 Loss_Sal:0.0368 Rem:2:08:10 lr: 0.0061
+Iter: 8400/20000 Loss_Cls:0.0642 Loss_Sal:0.0384 Rem:2:07:36 lr: 0.0061
+Iter: 8450/20000 Loss_Cls:0.0695 Loss_Sal:0.0388 Rem:2:07:03 lr: 0.0061
+Iter: 8500/20000 Loss_Cls:0.0780 Loss_Sal:0.0381 Rem:2:06:30 lr: 0.0061
+Iter: 8550/20000 Loss_Cls:0.0682 Loss_Sal:0.0360 Rem:2:05:57 lr: 0.0061
+Iter: 8600/20000 Loss_Cls:0.0634 Loss_Sal:0.0348 Rem:2:05:24 lr: 0.0060
+Iter: 8650/20000 Loss_Cls:0.0757 Loss_Sal:0.0354 Rem:2:04:51 lr: 0.0060
+Iter: 8700/20000 Loss_Cls:0.0662 Loss_Sal:0.0395 Rem:2:04:18 lr: 0.0060
+Iter: 8750/20000 Loss_Cls:0.0608 Loss_Sal:0.0389 Rem:2:03:45 lr: 0.0060
+Iter: 8800/20000 Loss_Cls:0.0673 Loss_Sal:0.0374 Rem:2:03:12 lr: 0.0059
+Iter: 8850/20000 Loss_Cls:0.0706 Loss_Sal:0.0359 Rem:2:02:39 lr: 0.0059
+Iter: 8900/20000 Loss_Cls:0.0704 Loss_Sal:0.0381 Rem:2:02:06 lr: 0.0059
+Iter: 8950/20000 Loss_Cls:0.0665 Loss_Sal:0.0386 Rem:2:01:33 lr: 0.0059
+Iter: 9000/20000 Loss_Cls:0.0671 Loss_Sal:0.0389 Rem:2:01:00 lr: 0.0058
+Iter: 9050/20000 Loss_Cls:0.0619 Loss_Sal:0.0382 Rem:2:00:27 lr: 0.0058
+Iter: 9100/20000 Loss_Cls:0.0692 Loss_Sal:0.0391 Rem:1:59:54 lr: 0.0058
+Iter: 9150/20000 Loss_Cls:0.0730 Loss_Sal:0.0380 Rem:1:59:21 lr: 0.0058
+Iter: 9200/20000 Loss_Cls:0.0644 Loss_Sal:0.0356 Rem:1:58:48 lr: 0.0057
+Iter: 9250/20000 Loss_Cls:0.0586 Loss_Sal:0.0370 Rem:1:58:15 lr: 0.0057
+Iter: 9300/20000 Loss_Cls:0.0630 Loss_Sal:0.0363 Rem:1:57:42 lr: 0.0057
+Iter: 9350/20000 Loss_Cls:0.0609 Loss_Sal:0.0400 Rem:1:57:09 lr: 0.0057
+Iter: 9400/20000 Loss_Cls:0.0587 Loss_Sal:0.0361 Rem:1:56:36 lr: 0.0056
+Iter: 9450/20000 Loss_Cls:0.0651 Loss_Sal:0.0387 Rem:1:56:03 lr: 0.0056
+Iter: 9500/20000 Loss_Cls:0.0613 Loss_Sal:0.0373 Rem:1:55:30 lr: 0.0056
+Iter: 9550/20000 Loss_Cls:0.0675 Loss_Sal:0.0385 Rem:1:54:57 lr: 0.0056
+Iter: 9600/20000 Loss_Cls:0.0627 Loss_Sal:0.0353 Rem:1:54:24 lr: 0.0056
+Iter: 9650/20000 Loss_Cls:0.0601 Loss_Sal:0.0376 Rem:1:53:51 lr: 0.0055
+Iter: 9700/20000 Loss_Cls:0.0600 Loss_Sal:0.0370 Rem:1:53:18 lr: 0.0055
+Iter: 9750/20000 Loss_Cls:0.0695 Loss_Sal:0.0378 Rem:1:52:45 lr: 0.0055
+Iter: 9800/20000 Loss_Cls:0.0627 Loss_Sal:0.0353 Rem:1:52:12 lr: 0.0055
+Iter: 9850/20000 Loss_Cls:0.0679 Loss_Sal:0.0345 Rem:1:51:39 lr: 0.0054
+Iter: 9900/20000 Loss_Cls:0.0588 Loss_Sal:0.0365 Rem:1:51:06 lr: 0.0054
+Iter: 9950/20000 Loss_Cls:0.0672 Loss_Sal:0.0384 Rem:1:50:33 lr: 0.0054
+Iter:10000/20000 Loss_Cls:0.0662 Loss_Sal:0.0364 Rem:1:50:00 lr: 0.0054
+Iter:10050/20000 Loss_Cls:0.0672 Loss_Sal:0.0346 Rem:1:49:27 lr: 0.0053
+Iter:10100/20000 Loss_Cls:0.0628 Loss_Sal:0.0369 Rem:1:48:53 lr: 0.0053
+Iter:10150/20000 Loss_Cls:0.0644 Loss_Sal:0.0353 Rem:1:48:20 lr: 0.0053
+Iter:10200/20000 Loss_Cls:0.0624 Loss_Sal:0.0380 Rem:1:47:47 lr: 0.0053
+Iter:10250/20000 Loss_Cls:0.0655 Loss_Sal:0.0373 Rem:1:47:14 lr: 0.0052
+Iter:10300/20000 Loss_Cls:0.0616 Loss_Sal:0.0355 Rem:1:46:41 lr: 0.0052
+Iter:10350/20000 Loss_Cls:0.0636 Loss_Sal:0.0354 Rem:1:46:08 lr: 0.0052
+Iter:10400/20000 Loss_Cls:0.0625 Loss_Sal:0.0361 Rem:1:45:35 lr: 0.0052
+Iter:10450/20000 Loss_Cls:0.0624 Loss_Sal:0.0343 Rem:1:45:02 lr: 0.0051
+Iter:10500/20000 Loss_Cls:0.0624 Loss_Sal:0.0379 Rem:1:44:29 lr: 0.0051
+Iter:10550/20000 Loss_Cls:0.0638 Loss_Sal:0.0368 Rem:1:43:56 lr: 0.0051
+Iter:10600/20000 Loss_Cls:0.0598 Loss_Sal:0.0360 Rem:1:43:24 lr: 0.0051
+Iter:10650/20000 Loss_Cls:0.0579 Loss_Sal:0.0383 Rem:1:42:51 lr: 0.0050
+Iter:10700/20000 Loss_Cls:0.0634 Loss_Sal:0.0339 Rem:1:42:18 lr: 0.0050
+Iter:10750/20000 Loss_Cls:0.0640 Loss_Sal:0.0384 Rem:1:41:45 lr: 0.0050
+Iter:10800/20000 Loss_Cls:0.0603 Loss_Sal:0.0330 Rem:1:41:12 lr: 0.0050
+Iter:10850/20000 Loss_Cls:0.0579 Loss_Sal:0.0371 Rem:1:40:39 lr: 0.0049
+Iter:10900/20000 Loss_Cls:0.0707 Loss_Sal:0.0389 Rem:1:40:06 lr: 0.0049
+Iter:10950/20000 Loss_Cls:0.0632 Loss_Sal:0.0363 Rem:1:39:33 lr: 0.0049
+Iter:11000/20000 Loss_Cls:0.0578 Loss_Sal:0.0357 Rem:1:39:00 lr: 0.0049
+Iter:11050/20000 Loss_Cls:0.0627 Loss_Sal:0.0355 Rem:1:38:27 lr: 0.0048
+Iter:11100/20000 Loss_Cls:0.0549 Loss_Sal:0.0365 Rem:1:37:53 lr: 0.0048
+Iter:11150/20000 Loss_Cls:0.0568 Loss_Sal:0.0381 Rem:1:37:20 lr: 0.0048
+Iter:11200/20000 Loss_Cls:0.0626 Loss_Sal:0.0374 Rem:1:36:47 lr: 0.0048
+Iter:11250/20000 Loss_Cls:0.0603 Loss_Sal:0.0392 Rem:1:36:14 lr: 0.0048
+Iter:11300/20000 Loss_Cls:0.0605 Loss_Sal:0.0356 Rem:1:35:41 lr: 0.0047
+Iter:11350/20000 Loss_Cls:0.0648 Loss_Sal:0.0364 Rem:1:35:08 lr: 0.0047
+Iter:11400/20000 Loss_Cls:0.0653 Loss_Sal:0.0337 Rem:1:34:35 lr: 0.0047
+Iter:11450/20000 Loss_Cls:0.0627 Loss_Sal:0.0366 Rem:1:34:02 lr: 0.0047
+Iter:11500/20000 Loss_Cls:0.0634 Loss_Sal:0.0349 Rem:1:33:29 lr: 0.0046
+Iter:11550/20000 Loss_Cls:0.0557 Loss_Sal:0.0362 Rem:1:32:56 lr: 0.0046
+Iter:11600/20000 Loss_Cls:0.0614 Loss_Sal:0.0364 Rem:1:32:23 lr: 0.0046
+Iter:11650/20000 Loss_Cls:0.0627 Loss_Sal:0.0363 Rem:1:31:50 lr: 0.0046
+Iter:11700/20000 Loss_Cls:0.0592 Loss_Sal:0.0353 Rem:1:31:17 lr: 0.0045
+Iter:11750/20000 Loss_Cls:0.0633 Loss_Sal:0.0358 Rem:1:30:44 lr: 0.0045
+Iter:11800/20000 Loss_Cls:0.0642 Loss_Sal:0.0367 Rem:1:30:11 lr: 0.0045
+Iter:11850/20000 Loss_Cls:0.0591 Loss_Sal:0.0371 Rem:1:29:38 lr: 0.0045
+Iter:11900/20000 Loss_Cls:0.0697 Loss_Sal:0.0395 Rem:1:29:05 lr: 0.0044
+Iter:11950/20000 Loss_Cls:0.0596 Loss_Sal:0.0354 Rem:1:28:32 lr: 0.0044
+Iter:12000/20000 Loss_Cls:0.0605 Loss_Sal:0.0356 Rem:1:27:59 lr: 0.0044
+Iter:12050/20000 Loss_Cls:0.0556 Loss_Sal:0.0357 Rem:1:27:26 lr: 0.0044
+Iter:12100/20000 Loss_Cls:0.0604 Loss_Sal:0.0345 Rem:1:26:53 lr: 0.0043
+Iter:12150/20000 Loss_Cls:0.0558 Loss_Sal:0.0373 Rem:1:26:20 lr: 0.0043
+Iter:12200/20000 Loss_Cls:0.0688 Loss_Sal:0.0351 Rem:1:25:47 lr: 0.0043
+Iter:12250/20000 Loss_Cls:0.0580 Loss_Sal:0.0354 Rem:1:25:14 lr: 0.0043
+Iter:12300/20000 Loss_Cls:0.0580 Loss_Sal:0.0354 Rem:1:24:41 lr: 0.0042
+Iter:12350/20000 Loss_Cls:0.0615 Loss_Sal:0.0358 Rem:1:24:08 lr: 0.0042
+Iter:12400/20000 Loss_Cls:0.0587 Loss_Sal:0.0351 Rem:1:23:35 lr: 0.0042
+Iter:12450/20000 Loss_Cls:0.0530 Loss_Sal:0.0391 Rem:1:23:02 lr: 0.0042
+Iter:12500/20000 Loss_Cls:0.0675 Loss_Sal:0.0358 Rem:1:22:29 lr: 0.0041
+Iter:12550/20000 Loss_Cls:0.0647 Loss_Sal:0.0370 Rem:1:21:56 lr: 0.0041
+Iter:12600/20000 Loss_Cls:0.0570 Loss_Sal:0.0351 Rem:1:21:23 lr: 0.0041
+Iter:12650/20000 Loss_Cls:0.0608 Loss_Sal:0.0382 Rem:1:20:50 lr: 0.0041
+Iter:12700/20000 Loss_Cls:0.0618 Loss_Sal:0.0347 Rem:1:20:17 lr: 0.0040
+Iter:12750/20000 Loss_Cls:0.0555 Loss_Sal:0.0357 Rem:1:19:44 lr: 0.0040
+Iter:12800/20000 Loss_Cls:0.0595 Loss_Sal:0.0348 Rem:1:19:11 lr: 0.0040
+Iter:12850/20000 Loss_Cls:0.0578 Loss_Sal:0.0341 Rem:1:18:38 lr: 0.0040
+Iter:12900/20000 Loss_Cls:0.0582 Loss_Sal:0.0360 Rem:1:18:05 lr: 0.0039
+Iter:12950/20000 Loss_Cls:0.0637 Loss_Sal:0.0367 Rem:1:17:32 lr: 0.0039
+Iter:13000/20000 Loss_Cls:0.0608 Loss_Sal:0.0365 Rem:1:16:59 lr: 0.0039
+Iter:13050/20000 Loss_Cls:0.0642 Loss_Sal:0.0371 Rem:1:16:26 lr: 0.0039
+Iter:13100/20000 Loss_Cls:0.0618 Loss_Sal:0.0382 Rem:1:15:53 lr: 0.0038
+Iter:13150/20000 Loss_Cls:0.0577 Loss_Sal:0.0363 Rem:1:15:20 lr: 0.0038
+Iter:13200/20000 Loss_Cls:0.0586 Loss_Sal:0.0344 Rem:1:14:47 lr: 0.0038
+Iter:13250/20000 Loss_Cls:0.0582 Loss_Sal:0.0369 Rem:1:14:14 lr: 0.0038
+Iter:13300/20000 Loss_Cls:0.0648 Loss_Sal:0.0352 Rem:1:13:41 lr: 0.0037
+Iter:13350/20000 Loss_Cls:0.0605 Loss_Sal:0.0339 Rem:1:13:08 lr: 0.0037
+Iter:13400/20000 Loss_Cls:0.0589 Loss_Sal:0.0361 Rem:1:12:35 lr: 0.0037
+Iter:13450/20000 Loss_Cls:0.0593 Loss_Sal:0.0372 Rem:1:12:02 lr: 0.0037
+Iter:13500/20000 Loss_Cls:0.0636 Loss_Sal:0.0346 Rem:1:11:29 lr: 0.0036
+Iter:13550/20000 Loss_Cls:0.0572 Loss_Sal:0.0353 Rem:1:10:56 lr: 0.0036
+Iter:13600/20000 Loss_Cls:0.0553 Loss_Sal:0.0372 Rem:1:10:23 lr: 0.0036
+Iter:13650/20000 Loss_Cls:0.0599 Loss_Sal:0.0354 Rem:1:09:50 lr: 0.0036
+Iter:13700/20000 Loss_Cls:0.0601 Loss_Sal:0.0351 Rem:1:09:17 lr: 0.0035
+Iter:13750/20000 Loss_Cls:0.0508 Loss_Sal:0.0367 Rem:1:08:44 lr: 0.0035
+Iter:13800/20000 Loss_Cls:0.0542 Loss_Sal:0.0368 Rem:1:08:11 lr: 0.0035
+Iter:13850/20000 Loss_Cls:0.0568 Loss_Sal:0.0359 Rem:1:07:38 lr: 0.0035
+Iter:13900/20000 Loss_Cls:0.0574 Loss_Sal:0.0363 Rem:1:07:05 lr: 0.0034
+Iter:13950/20000 Loss_Cls:0.0544 Loss_Sal:0.0334 Rem:1:06:32 lr: 0.0034
+Iter:14000/20000 Loss_Cls:0.0564 Loss_Sal:0.0366 Rem:1:05:59 lr: 0.0034
+Iter:14050/20000 Loss_Cls:0.0493 Loss_Sal:0.0335 Rem:1:05:26 lr: 0.0034
+Iter:14100/20000 Loss_Cls:0.0584 Loss_Sal:0.0350 Rem:1:04:53 lr: 0.0033
+Iter:14150/20000 Loss_Cls:0.0673 Loss_Sal:0.0392 Rem:1:04:20 lr: 0.0033
+Iter:14200/20000 Loss_Cls:0.0539 Loss_Sal:0.0351 Rem:1:03:47 lr: 0.0033
+Iter:14250/20000 Loss_Cls:0.0611 Loss_Sal:0.0341 Rem:1:03:14 lr: 0.0033
+Iter:14300/20000 Loss_Cls:0.0494 Loss_Sal:0.0363 Rem:1:02:41 lr: 0.0032
+Iter:14350/20000 Loss_Cls:0.0625 Loss_Sal:0.0328 Rem:1:02:08 lr: 0.0032
+Iter:14400/20000 Loss_Cls:0.0592 Loss_Sal:0.0342 Rem:1:01:35 lr: 0.0032
+Iter:14450/20000 Loss_Cls:0.0536 Loss_Sal:0.0329 Rem:1:01:02 lr: 0.0032
+Iter:14500/20000 Loss_Cls:0.0644 Loss_Sal:0.0336 Rem:1:00:29 lr: 0.0031
+Iter:14550/20000 Loss_Cls:0.0574 Loss_Sal:0.0351 Rem:0:59:56 lr: 0.0031
+Iter:14600/20000 Loss_Cls:0.0547 Loss_Sal:0.0346 Rem:0:59:23 lr: 0.0031
+Iter:14650/20000 Loss_Cls:0.0623 Loss_Sal:0.0391 Rem:0:58:50 lr: 0.0031
+Iter:14700/20000 Loss_Cls:0.0629 Loss_Sal:0.0328 Rem:0:58:17 lr: 0.0030
+Iter:14750/20000 Loss_Cls:0.0610 Loss_Sal:0.0355 Rem:0:57:44 lr: 0.0030
+Iter:14800/20000 Loss_Cls:0.0579 Loss_Sal:0.0369 Rem:0:57:11 lr: 0.0030
+Iter:14850/20000 Loss_Cls:0.0518 Loss_Sal:0.0371 Rem:0:56:38 lr: 0.0029
+Iter:14900/20000 Loss_Cls:0.0569 Loss_Sal:0.0359 Rem:0:56:05 lr: 0.0029
+Iter:14950/20000 Loss_Cls:0.0551 Loss_Sal:0.0324 Rem:0:55:32 lr: 0.0029
+Iter:15000/20000 Loss_Cls:0.0549 Loss_Sal:0.0354 Rem:0:54:59 lr: 0.0029
+Iter:15050/20000 Loss_Cls:0.0515 Loss_Sal:0.0358 Rem:0:54:26 lr: 0.0028
+Iter:15100/20000 Loss_Cls:0.0623 Loss_Sal:0.0360 Rem:0:53:53 lr: 0.0028
+Iter:15150/20000 Loss_Cls:0.0548 Loss_Sal:0.0368 Rem:0:53:20 lr: 0.0028
+Iter:15200/20000 Loss_Cls:0.0542 Loss_Sal:0.0347 Rem:0:52:47 lr: 0.0028
+Iter:15250/20000 Loss_Cls:0.0590 Loss_Sal:0.0329 Rem:0:52:14 lr: 0.0027
+Iter:15300/20000 Loss_Cls:0.0532 Loss_Sal:0.0352 Rem:0:51:41 lr: 0.0027
+Iter:15350/20000 Loss_Cls:0.0569 Loss_Sal:0.0348 Rem:0:51:08 lr: 0.0027
+Iter:15400/20000 Loss_Cls:0.0463 Loss_Sal:0.0342 Rem:0:50:35 lr: 0.0027
+Iter:15450/20000 Loss_Cls:0.0520 Loss_Sal:0.0349 Rem:0:50:02 lr: 0.0026
+Iter:15500/20000 Loss_Cls:0.0550 Loss_Sal:0.0358 Rem:0:49:29 lr: 0.0026
+Iter:15550/20000 Loss_Cls:0.0523 Loss_Sal:0.0360 Rem:0:48:56 lr: 0.0026
+Iter:15600/20000 Loss_Cls:0.0605 Loss_Sal:0.0345 Rem:0:48:23 lr: 0.0026
+Iter:15650/20000 Loss_Cls:0.0531 Loss_Sal:0.0360 Rem:0:47:50 lr: 0.0025
+Iter:15700/20000 Loss_Cls:0.0534 Loss_Sal:0.0356 Rem:0:47:17 lr: 0.0025
+Iter:15750/20000 Loss_Cls:0.0560 Loss_Sal:0.0357 Rem:0:46:44 lr: 0.0025
+Iter:15800/20000 Loss_Cls:0.0554 Loss_Sal:0.0369 Rem:0:46:11 lr: 0.0025
+Iter:15850/20000 Loss_Cls:0.0552 Loss_Sal:0.0363 Rem:0:45:38 lr: 0.0024
+Iter:15900/20000 Loss_Cls:0.0503 Loss_Sal:0.0340 Rem:0:45:05 lr: 0.0024
+Iter:15950/20000 Loss_Cls:0.0574 Loss_Sal:0.0339 Rem:0:44:32 lr: 0.0024
+Iter:16000/20000 Loss_Cls:0.0566 Loss_Sal:0.0380 Rem:0:43:59 lr: 0.0023
+Iter:16050/20000 Loss_Cls:0.0558 Loss_Sal:0.0348 Rem:0:43:26 lr: 0.0023
+Iter:16100/20000 Loss_Cls:0.0506 Loss_Sal:0.0370 Rem:0:42:53 lr: 0.0023
+Iter:16150/20000 Loss_Cls:0.0597 Loss_Sal:0.0348 Rem:0:42:20 lr: 0.0023
+Iter:16200/20000 Loss_Cls:0.0553 Loss_Sal:0.0370 Rem:0:41:47 lr: 0.0022
+Iter:16250/20000 Loss_Cls:0.0585 Loss_Sal:0.0339 Rem:0:41:14 lr: 0.0022
+Iter:16300/20000 Loss_Cls:0.0524 Loss_Sal:0.0366 Rem:0:40:41 lr: 0.0022
+Iter:16350/20000 Loss_Cls:0.0450 Loss_Sal:0.0393 Rem:0:40:08 lr: 0.0022
+Iter:16400/20000 Loss_Cls:0.0572 Loss_Sal:0.0336 Rem:0:39:35 lr: 0.0021
+Iter:16450/20000 Loss_Cls:0.0615 Loss_Sal:0.0353 Rem:0:39:02 lr: 0.0021
+Iter:16500/20000 Loss_Cls:0.0554 Loss_Sal:0.0351 Rem:0:38:29 lr: 0.0021
+Iter:16550/20000 Loss_Cls:0.0533 Loss_Sal:0.0352 Rem:0:37:56 lr: 0.0021
+Iter:16600/20000 Loss_Cls:0.0527 Loss_Sal:0.0357 Rem:0:37:23 lr: 0.0020
+Iter:16650/20000 Loss_Cls:0.0530 Loss_Sal:0.0350 Rem:0:36:50 lr: 0.0020
+Iter:16700/20000 Loss_Cls:0.0558 Loss_Sal:0.0369 Rem:0:36:17 lr: 0.0020
+Iter:16750/20000 Loss_Cls:0.0541 Loss_Sal:0.0359 Rem:0:35:44 lr: 0.0019
+Iter:16800/20000 Loss_Cls:0.0557 Loss_Sal:0.0343 Rem:0:35:11 lr: 0.0019
+Iter:16850/20000 Loss_Cls:0.0546 Loss_Sal:0.0340 Rem:0:34:38 lr: 0.0019
+Iter:16900/20000 Loss_Cls:0.0509 Loss_Sal:0.0342 Rem:0:34:05 lr: 0.0019
+Iter:16950/20000 Loss_Cls:0.0530 Loss_Sal:0.0357 Rem:0:33:32 lr: 0.0018
+Iter:17000/20000 Loss_Cls:0.0563 Loss_Sal:0.0363 Rem:0:32:59 lr: 0.0018
+Iter:17050/20000 Loss_Cls:0.0582 Loss_Sal:0.0360 Rem:0:32:26 lr: 0.0018
+Iter:17100/20000 Loss_Cls:0.0601 Loss_Sal:0.0344 Rem:0:31:53 lr: 0.0018
+Iter:17150/20000 Loss_Cls:0.0561 Loss_Sal:0.0355 Rem:0:31:20 lr: 0.0017
+Iter:17200/20000 Loss_Cls:0.0548 Loss_Sal:0.0358 Rem:0:30:47 lr: 0.0017
+Iter:17250/20000 Loss_Cls:0.0518 Loss_Sal:0.0333 Rem:0:30:14 lr: 0.0017
+Iter:17300/20000 Loss_Cls:0.0551 Loss_Sal:0.0322 Rem:0:29:41 lr: 0.0016
+Iter:17350/20000 Loss_Cls:0.0549 Loss_Sal:0.0349 Rem:0:29:08 lr: 0.0016
+Iter:17400/20000 Loss_Cls:0.0502 Loss_Sal:0.0367 Rem:0:28:35 lr: 0.0016
+Iter:17450/20000 Loss_Cls:0.0542 Loss_Sal:0.0358 Rem:0:28:02 lr: 0.0016
+Iter:17500/20000 Loss_Cls:0.0589 Loss_Sal:0.0359 Rem:0:27:29 lr: 0.0015
+Iter:17550/20000 Loss_Cls:0.0492 Loss_Sal:0.0371 Rem:0:26:56 lr: 0.0015
+Iter:17600/20000 Loss_Cls:0.0543 Loss_Sal:0.0351 Rem:0:26:23 lr: 0.0015
+Iter:17650/20000 Loss_Cls:0.0440 Loss_Sal:0.0323 Rem:0:25:50 lr: 0.0015
+Iter:17700/20000 Loss_Cls:0.0594 Loss_Sal:0.0375 Rem:0:25:17 lr: 0.0014
+Iter:17750/20000 Loss_Cls:0.0530 Loss_Sal:0.0358 Rem:0:24:44 lr: 0.0014
+Iter:17800/20000 Loss_Cls:0.0532 Loss_Sal:0.0364 Rem:0:24:11 lr: 0.0014
+Iter:17850/20000 Loss_Cls:0.0544 Loss_Sal:0.0375 Rem:0:23:38 lr: 0.0013
+Iter:17900/20000 Loss_Cls:0.0556 Loss_Sal:0.0328 Rem:0:23:05 lr: 0.0013
+Iter:17950/20000 Loss_Cls:0.0514 Loss_Sal:0.0339 Rem:0:22:32 lr: 0.0013
+Iter:18000/20000 Loss_Cls:0.0509 Loss_Sal:0.0343 Rem:0:21:59 lr: 0.0013
+Iter:18050/20000 Loss_Cls:0.0554 Loss_Sal:0.0328 Rem:0:21:26 lr: 0.0012
+Iter:18100/20000 Loss_Cls:0.0556 Loss_Sal:0.0340 Rem:0:20:53 lr: 0.0012
+Iter:18150/20000 Loss_Cls:0.0553 Loss_Sal:0.0357 Rem:0:20:20 lr: 0.0012
+Iter:18200/20000 Loss_Cls:0.0515 Loss_Sal:0.0350 Rem:0:19:47 lr: 0.0011
+Iter:18250/20000 Loss_Cls:0.0530 Loss_Sal:0.0343 Rem:0:19:14 lr: 0.0011
+Iter:18300/20000 Loss_Cls:0.0579 Loss_Sal:0.0352 Rem:0:18:41 lr: 0.0011
+Iter:18350/20000 Loss_Cls:0.0488 Loss_Sal:0.0358 Rem:0:18:08 lr: 0.0011
+Iter:18400/20000 Loss_Cls:0.0502 Loss_Sal:0.0315 Rem:0:17:35 lr: 0.0010
+Iter:18450/20000 Loss_Cls:0.0505 Loss_Sal:0.0350 Rem:0:17:02 lr: 0.0010
+Iter:18500/20000 Loss_Cls:0.0564 Loss_Sal:0.0372 Rem:0:16:29 lr: 0.0010
+Iter:18550/20000 Loss_Cls:0.0555 Loss_Sal:0.0330 Rem:0:15:56 lr: 0.0009
+Iter:18600/20000 Loss_Cls:0.0519 Loss_Sal:0.0369 Rem:0:15:23 lr: 0.0009
+Iter:18650/20000 Loss_Cls:0.0549 Loss_Sal:0.0383 Rem:0:14:50 lr: 0.0009
+Iter:18700/20000 Loss_Cls:0.0536 Loss_Sal:0.0355 Rem:0:14:17 lr: 0.0009
+Iter:18750/20000 Loss_Cls:0.0529 Loss_Sal:0.0323 Rem:0:13:44 lr: 0.0008
+Iter:18800/20000 Loss_Cls:0.0509 Loss_Sal:0.0351 Rem:0:13:11 lr: 0.0008
+Iter:18850/20000 Loss_Cls:0.0537 Loss_Sal:0.0319 Rem:0:12:38 lr: 0.0008
+Iter:18900/20000 Loss_Cls:0.0530 Loss_Sal:0.0352 Rem:0:12:05 lr: 0.0007
+Iter:18950/20000 Loss_Cls:0.0541 Loss_Sal:0.0356 Rem:0:11:32 lr: 0.0007
+Iter:19000/20000 Loss_Cls:0.0463 Loss_Sal:0.0358 Rem:0:10:59 lr: 0.0007
+Iter:19050/20000 Loss_Cls:0.0492 Loss_Sal:0.0354 Rem:0:10:26 lr: 0.0006
+Iter:19100/20000 Loss_Cls:0.0553 Loss_Sal:0.0369 Rem:0:09:53 lr: 0.0006
+Iter:19150/20000 Loss_Cls:0.0496 Loss_Sal:0.0349 Rem:0:09:20 lr: 0.0006
+Iter:19200/20000 Loss_Cls:0.0594 Loss_Sal:0.0390 Rem:0:08:47 lr: 0.0006
+Iter:19250/20000 Loss_Cls:0.0525 Loss_Sal:0.0366 Rem:0:08:14 lr: 0.0005
+Iter:19300/20000 Loss_Cls:0.0506 Loss_Sal:0.0348 Rem:0:07:41 lr: 0.0005
+Iter:19350/20000 Loss_Cls:0.0538 Loss_Sal:0.0343 Rem:0:07:08 lr: 0.0005
+Iter:19400/20000 Loss_Cls:0.0534 Loss_Sal:0.0338 Rem:0:06:35 lr: 0.0004
+Iter:19450/20000 Loss_Cls:0.0458 Loss_Sal:0.0343 Rem:0:06:02 lr: 0.0004
+Iter:19500/20000 Loss_Cls:0.0451 Loss_Sal:0.0331 Rem:0:05:29 lr: 0.0004
+Iter:19550/20000 Loss_Cls:0.0595 Loss_Sal:0.0354 Rem:0:04:56 lr: 0.0003
+Iter:19600/20000 Loss_Cls:0.0496 Loss_Sal:0.0331 Rem:0:04:23 lr: 0.0003
+Iter:19650/20000 Loss_Cls:0.0513 Loss_Sal:0.0337 Rem:0:03:50 lr: 0.0003
+Iter:19700/20000 Loss_Cls:0.0516 Loss_Sal:0.0368 Rem:0:03:17 lr: 0.0002
+Iter:19750/20000 Loss_Cls:0.0540 Loss_Sal:0.0344 Rem:0:02:44 lr: 0.0002
+Iter:19800/20000 Loss_Cls:0.0540 Loss_Sal:0.0342 Rem:0:02:11 lr: 0.0002
+Iter:19850/20000 Loss_Cls:0.0510 Loss_Sal:0.0341 Rem:0:01:38 lr: 0.0001
+Iter:19900/20000 Loss_Cls:0.0524 Loss_Sal:0.0326 Rem:0:01:05 lr: 0.0001
+Iter:19950/20000 Loss_Cls:0.0512 Loss_Sal:0.0328 Rem:0:00:32 lr: 0.0000

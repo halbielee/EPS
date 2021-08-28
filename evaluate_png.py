@@ -1,9 +1,10 @@
 import os
+import time
+import json
+import argparse
 import numpy as np
 from PIL import Image
-import argparse
 from tqdm import tqdm
-import json
 
 
 class IOUMetric:
@@ -45,76 +46,85 @@ class IOUMetric:
         return acc, recall, precision, TP, TN, FP, cls_iu, mean_iu, fwavacc
 
 
-if __name__ == '__main__':
+def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--gt_dir', type=str, default='/srv/PascalVOC/VOCdevkit/VOC2012/SegmentationClassAug/')
-    parser.add_argument('--pred_dir', type=str)
-    parser.add_argument('--datalist', type=str, default='data/train.txt')
-    parser.add_argument('--save_path', type=str)
+    parser.add_argument('--dataset', required=True)
+    parser.add_argument('--datalist', required=True, type=str)
+    parser.add_argument('--gt_dir', required=True, type=str)
+    parser.add_argument('--pred_dir', required=True, type=str)
+    parser.add_argument('--save_path', required=True, type=str)
     args = parser.parse_args()
 
-    mIOU = IOUMetric(num_classes=21)
+    # dataset information
+    if args.dataset == 'voc12':
+        args.num_classes = 21
+        args.ignore_label = 255
+    elif args.dataset == "coco":
+        args.num_classes = 81
+        args.ignore_label = 255
+    return args
 
-    gt_dir = args.gt_dir
-    list_dir = 'ImageSets/Segmentation/'
-    ids = [i.split()[0].split('/')[2].split('.')[0].strip() for i in open(args.datalist) if not i.strip() == '']
 
-    classes = np.array(('background',  # always index 0
-                        'aeroplane', 'bicycle', 'bird', 'boat',
-                        'bottle', 'bus', 'car', 'cat', 'chair',
-                        'cow', 'diningtable', 'dog', 'horse',
-                        'motorbike', 'person', 'pottedplant',
-                        'sheep', 'sofa', 'train', 'tvmonitor'))
-    colormap = [(0, 0, 0), (0.5, 0, 0), (0, 0.5, 0), (0.5, 0.5, 0), (0, 0, 0.5), (0.5, 0, 0.5), (0, 0.5, 0.5),
-                (0.5, 0.5, 0.5), (0.25, 0, 0), (0.75, 0, 0), (0.25, 0.5, 0), (0.75, 0.5, 0), (0.25, 0, 0.5),
-                (0.75, 0, 0.5), (0.25, 0.5, 0.5), (0.75, 0.5, 0.5), (0, 0.25, 0), (0.5, 0.25, 0), (0, 0.75, 0),
-                (0.5, 0.75, 0), (0, 0.25, 0.5)]
-    values = [i for i in range(21)]
-    color2val = dict(zip(colormap, values))
+def get_labels(label_file):
+    idx2num = list()
+    idx2label = list()
+    for line in open(label_file).readlines():
+        num, label = line.strip().split()
+        idx2num.append(num)
+        idx2label.append(label)
+    return idx2num, idx2label
 
-    import time
+
+if __name__ == '__main__':
+    # get arguments
+    args = parse_args()
+    idx2num, idx2label = get_labels(os.path.join('metadata', args.dataset, 'labels.txt'))
+
+    mIOU = IOUMetric(num_classes=args.num_classes)
+
+    img_ids = open(args.datalist).read().splitlines()
+
+    postfix = '.png'
 
     st = time.time()
-    for ind, img_id in tqdm(enumerate(ids)):
-        img_path = os.path.join(gt_dir, img_id + '.png')
-        pred_img_path = os.path.join(args.pred_dir, img_id + '.png')
+    for idx, img_id in tqdm(enumerate(img_ids)):
+        gt_path = os.path.join(args.gt_dir, img_id + postfix)
+        pred_path = os.path.join(args.pred_dir, img_id + '.png')
 
-        gt = Image.open(img_path)
+        gt = Image.open(gt_path)
         w, h = gt.size[0], gt.size[1]
-        gt = np.array(gt, dtype=np.int32)  # shape = [h, w], 0-20 is classes, 255 is ingore boundary
+        gt = np.array(gt, dtype=np.uint8)  # shape = [h, w], 0-20 is classes, 255 is ingore boundary
 
-        pred = Image.open(pred_img_path)
+        pred = Image.open(pred_path)
         pred = pred.crop((0, 0, w, h))
-        pred = np.array(pred, dtype=np.int32)  # shape = [h, w]
-
+        pred = np.array(pred, dtype=np.uint8)  # shape = [h, w]
         mIOU.add_batch(pred, gt)
-        # print(img_id, ind)
 
     acc, recall, precision, TP, TN, FP, cls_iu, miou, fwavacc = mIOU.evaluate()
 
     mean_prec = np.nanmean(precision)
     mean_recall = np.nanmean(recall)
 
-    result = {"Recall": ["{:.2f}".format(i) for i in recall.tolist()],
-              "Precision": ["{:.2f}".format(i) for i in precision.tolist()],
-              "Mean_Recall": mean_recall,
-              "Mean_Precision": mean_prec,
-              "IoU": cls_iu,
-              "Mean IoU": miou,
-              "TP": TP.tolist(),
-              "TN": TN.tolist(),
-              "FP": FP.tolist()}
-    # result = {"Pixel Accuracy": acc,
-    #           "Recall": recall.tolist(),
-    #           "Precision": precision.tolist(),
+    print(acc)
+    with open(args.save_path, 'w') as f:
+        f.write("{:>5} {:>20} {:>10} {:>10} {:>10}\n".format('IDX', 'Name', 'IoU', 'Prec', 'Recall'))
+        f.write("{:>5} {:>20} {:>10.2f} {:>10.2f} {:>10.2f}\n".format(
+            '-', 'mean', miou * 100, mean_prec * 100, mean_recall * 100))
+        for i in range(args.num_classes):
+            f.write("{:>5} {:>20} {:>10.2f} {:>10.2f} {:>10.2f}\n".format(
+                idx2num[i], idx2label[i][:10], cls_iu[i] * 100, precision[i] * 100, recall[i] * 100))
+    print("{:>8} {:>8} {:>8} {:>8} {:>8}".format('IDX', 'IoU', 'Prec', 'Recall', 'ACC'))
+    print("{:>8} {:>8.2f} {:>8.2f} {:>8.2f} {:>8.2f}".format(
+        'mean', miou * 100, mean_prec * 100, mean_recall * 100, np.mean(acc) * 100))
+
+
+
+    # result = {"Recall": ["{:.2f}".format(i) for i in recall.tolist()],
+    #           "Precision": ["{:.2f}".format(i) for i in precision.tolist()],
+    #           "Mean_Recall": mean_recall,
+    #           "Mean_Precision": mean_prec,
+    #           "IoU": cls_iu,
+    #           "Mean IoU": miou,
     #           "TP": TP.tolist(),
     #           "TN": TN.tolist(),
-    #           "FP": FP.tolist(),
-    #           "Frequency Weighted IoU": fwavacc,
-    #           "Mean IoU": miou,
-    #           "Class IoU": cls_iu}
-
-    with open(args.save_path, "w") as f:
-        json.dump(result, f, indent=4, sort_keys=True)
-    # print(acc, acc_cls, cls_iu, miou, fwavacc)
-    print('mIOU = %s, time = %s s' % (miou, str(time.time() - st)))
+    #           "FP": FP.tolist()}

@@ -14,7 +14,7 @@ from torch.multiprocessing import Process
 from util import imutils, pyutils
 from util.imutils import HWC_to_CHW
 from network.resnet38d import Normalize
-from data.dataset import load_img_id_list, load_img_label_list_from_npy
+from metadata.dataset import load_img_id_list, load_img_label_list_from_npy
 
 
 start = time.time()
@@ -35,13 +35,23 @@ def parse_args():
     parser.add_argument("--cam_npy", default=None, type=str)
     parser.add_argument("--cam_png", default=None, type=str)
     parser.add_argument("--thr", default=0.20, type=float)
+    parser.add_argument("--dataset", default='voc12', type=str)
     args = parser.parse_args()
+
+    if args.dataset == 'voc12':
+        args.num_classes = 20
+    elif args.dataset == 'coco':
+        args.num_classes = 80
+    else:
+        raise Exception('Error')
 
     # model information
     if 'cls' in args.network:
         args.network_type = 'cls'
+        args.model_num_classes = args.num_classes
     elif 'eps' in args.network:
         args.network_type = 'eps'
+        args.model_num_classes = args.num_classes + 1
     else:
         raise Exception('No appropriate model type')
 
@@ -106,7 +116,7 @@ def predict_cam(model, image, label, gpu, network_type):
             if network_type == 'cls':
                 cam = F.interpolate(cam, original_image_size, mode='bilinear', align_corners=False)[0]
 
-                cam = cam.cpu().numpy() * label.reshape(20, 1, 1)
+                cam = cam.cpu().numpy() * label.reshape(args.num_classes, 1, 1)
 
                 if i % 2 == 1:
                     cam = np.flip(cam, axis=-1)
@@ -118,7 +128,7 @@ def predict_cam(model, image, label, gpu, network_type):
                 cam_fg = cam[:-1]
                 cam_bg = cam[-1:]
 
-                cam_fg = cam_fg.cpu().numpy() * label.reshape(20, 1, 1)
+                cam_fg = cam_fg.cpu().numpy() * label.reshape(args.num_classes, 1, 1)
                 cam_bg = cam_bg.cpu().numpy()
 
                 if i % 2 == 1:
@@ -150,7 +160,7 @@ def infer_cam_mp(process_id, image_ids, label_list, cur_gpu):
     print('GPU:', cur_gpu)
     print('{} images per process'.format(len(image_ids)))
 
-    model = getattr(importlib.import_module(args.network), 'Net')()
+    model = getattr(importlib.import_module(args.network), 'Net')(args.model_num_classes)
     model = model.cuda(cur_gpu)
     model.load_state_dict(torch.load(args.weights))
     model.eval()
@@ -177,12 +187,12 @@ def infer_cam_mp(process_id, image_ids, label_list, cur_gpu):
         norm_cam = sum_cam / (np.max(sum_cam, (1, 2), keepdims=True) + 1e-5)
 
         cam_dict = {}
-        for j in range(20):
+        for j in range(args.num_classes):
             if label[j] > 1e-5:
                 cam_dict[j] = norm_cam[j]
 
         h, w = list(cam_dict.values())[0].shape
-        tensor = np.zeros((21, h, w), np.float32)
+        tensor = np.zeros((args.num_classes + 1, h, w), np.float32)
         for key in cam_dict.keys():
             tensor[key + 1] = cam_dict[key]
         tensor[0, :, :] = args.thr
@@ -206,7 +216,7 @@ def infer_cam_mp(process_id, image_ids, label_list, cur_gpu):
 
 def main_mp():
     image_ids = load_img_id_list(args.infer_list)
-    label_list = load_img_label_list_from_npy(image_ids)
+    label_list = load_img_label_list_from_npy(image_ids, args.dataset)
     n_total_images = len(image_ids)
     assert len(image_ids) == len(label_list)
 

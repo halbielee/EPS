@@ -3,8 +3,7 @@ from util import torchutils
 
 def get_optimizer(args, model, max_step=None):
     if max_step is None:
-        max_step = (len(open(args.train_list).read().splitlines()) // args.batch_size)\
-                   * args.max_epoches
+        max_step = args.max_iters
     param_groups = model.get_parameter_groups()
     optimizer = torchutils.PolyOptimizer([
         {'params': param_groups[0], 'lr': args.lr, 'weight_decay': args.wt_dec},

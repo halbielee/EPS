@@ -42,12 +42,15 @@ thereby significantly improving the quality of pseudo-masks.
 
 - Please see thse issuses: [dCRF](https://github.com/halbielee/EPS/issues/5) and [pre-trained model](https://github.com/halbielee/EPS/issues/4)
 
+28 Aug, 2021: Major updates about MS-COCO 2014 dataset and minor updates (cleanup)
+
 ## Installation
 
 
 - Python 3.6
 - Pytorch >= 1.0.0
 - Torchvision >= 0.2.2
+- MXNet
 - Pillow
 - opencv-python (opencv for Python)
 
@@ -57,13 +60,21 @@ thereby significantly improving the quality of pseudo-masks.
 
 
 ### Dataset & pretrained model
-- Download the dataset and the pretrained model.
-
-    - [Pascal VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) 
-    - [ImageNet-pretrained Model](https://github.com/jiwoon-ahn/psa) 
-      for [ResNet38](https://arxiv.org/abs/1611.10080) 
-    - [Saliency map](https://drive.google.com/file/d/19AjSmgdMlIZH4FXVZ5zjlUZcoZZCkwrI/view?usp=sharing) 
+- PASCAL VOC 2012
+    - [Images](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) 
+    - [Saliency maps](https://drive.google.com/file/d/19AjSmgdMlIZH4FXVZ5zjlUZcoZZCkwrI/view?usp=sharing) 
       from [PFAN](https://arxiv.org/abs/1903.00179)
+
+- MS-COCO 2014
+    - [Images](https://cocodataset.org/#home) 
+    - [Saliency maps](https://drive.google.com/file/d/1o50oztQqTc_xZdgpIEvgKD2Xi_HqBFig/view?usp=sharing) 
+      from [PFAN](https://arxiv.org/abs/1903.00179)
+    - [Segmentation masks](https://drive.google.com/file/d/16wuPinx0rdIP_PO0uYeCn9rfX2-evc-S/view?usp=sharing)
+
+- Pretrained models
+    - [ImageNet-pretrained Model](https://drive.google.com/file/d/15F13LEL5aO45JU-j45PYjzv5KW5bn_Pn/view?usp=sharing) 
+      for [ResNet38](https://arxiv.org/abs/1611.10080)
+
 
 
 
@@ -73,14 +84,28 @@ thereby significantly improving the quality of pseudo-masks.
     ```bash
     # Please see these files for the detail of execution.
     
+    # PASCAL VOC 2012 
     # Baseline
-    bash script/script_cls.sh
-    
+    bash script/vo12_cls.sh
     # EPS
-    bash script/script_eps.sh
+    bash script/voc12_eps.sh
+    
+    # MS-COCO 2014
+    # Baseline
+    bash script/coco_cls.sh
+    # EPS
+    bash script/coco_eps.sh  
     ```
-- We provide trained model for EPS. 
-  - [ResNet38 w/ EPS](https://drive.google.com/file/d/1BmJBt66_9WU24sTGlK_jNnHTwaNaCKt0/view?usp=sharing)
+- We provide the performance of the pseudo-masks and trained models.
+
+  | Dataset         | METHOD | Train(mIoU) | Checkpoint                                                   | Log                                    |
+  | --------------- | ------ | ----------- | ------------------------------------------------------------ | -------------------------------------- |
+  | PASCAL VOC 2012 | Base   | 47.05       | [Download](https://drive.google.com/file/d/1dO4ZKerN6MMFLjaDw0TV_h7ZUOxRQvdq/view?usp=sharing)                                                 | [voc12_cls.log](log/log_voc12_cls.log) |
+  | PASCAL VOC 2012 | EPS    | 69.22       | [Download](https://drive.google.com/file/d/1f3iVGRt2nH8BMxEP-w6VoJANouoHNLYM/view?usp=sharing)                                                 | [voc12_eps.log](log/log_voc12_eps.log) |
+  | MS-COCO 2014    | Base   | 31.23       | [Download](https://drive.google.com/file/d/19ZCJbk15WiHBLK5-smJmVp-tXAw4UFRU/view?usp=sharing) | [coco_cls.log](log/log_coco_cls.log)   |
+  | MS-COCO 2014    | EPS    | 37.15       | [Download](https://drive.google.com/file/d/1D9dDj2_oR_aLUWpex2HL3o80zbGpk7Vp/view?usp=sharing) | [coco_eps.log](log/log_coco_eps.log)   |
+
+
 
 - dCRF hyper-parameters
   - We did not use dCRF for our pseudo-masks, but only used for the comparision in the paper.
