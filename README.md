@@ -102,7 +102,7 @@ thereby significantly improving the quality of pseudo-masks.
   | --------------- | ------ | ----------- | ------------------------------------------------------------ | -------------------------------------- |
   | PASCAL VOC 2012 | Base   | 47.05       | [Download](https://drive.google.com/file/d/1dO4ZKerN6MMFLjaDw0TV_h7ZUOxRQvdq/view?usp=sharing)                                                 | [voc12_cls.log](log/log_voc12_cls.log) |
   | PASCAL VOC 2012 | EPS    | 69.22       | [Download](https://drive.google.com/file/d/1f3iVGRt2nH8BMxEP-w6VoJANouoHNLYM/view?usp=sharing)                                                 | [voc12_eps.log](log/log_voc12_eps.log) |
-  | MS-COCO 2014    | Base   | 31.23       | [Download](https://drive.google.com/file/d/19ZCJbk15WiHBLK5-smJmVp-tXAw4UFRU/view?usp=sharing) | [coco_cls.log](log/log_coco_cls.log)   |
+  | MS-COCO 2014    | Base   | 31.23       | [Download](https://drive.google.com/file/d/1VPi5GbTarzix_dwHBWC__1_WWrEZ6fzw/view?usp=sharing) | [coco_cls.log](log/log_coco_cls.log)   |
   | MS-COCO 2014    | EPS    | 37.15       | [Download](https://drive.google.com/file/d/1D9dDj2_oR_aLUWpex2HL3o80zbGpk7Vp/view?usp=sharing) | [coco_eps.log](log/log_coco_eps.log)   |
 
 
