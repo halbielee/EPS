@@ -40,10 +40,12 @@ thereby significantly improving the quality of pseudo-masks.
 
 19 Aug, 2021: Minor update on information about dCRF and the pre-trained model of the segmentation networks
 
-- Please see thse issuses: [dCRF](https://github.com/halbielee/EPS/issues/5) and [pre-trained model](https://github.com/halbielee/EPS/issues/4)
+- Please see the issuses: [dCRF](https://github.com/halbielee/EPS/issues/5) and [pre-trained model](https://github.com/halbielee/EPS/issues/4)
 
 28 Aug, 2021: Major updates about MS-COCO 2014 dataset and minor updates (cleanup)
 
+15 Apr, 2022: Minor update on information about the method setting up 'cls_labels.npy' the for ms-coco 17 dataset
+- Please see the issue: [coco17](https://github.com/halbielee/EPS/issues/13)
 ## Installation
 
 
@@ -75,7 +77,8 @@ thereby significantly improving the quality of pseudo-masks.
     - [ImageNet-pretrained Model](https://drive.google.com/file/d/15F13LEL5aO45JU-j45PYjzv5KW5bn_Pn/view?usp=sharing) 
       for [ResNet38](https://arxiv.org/abs/1611.10080)
 
-      
+- MS-COCO 2017
+    - The way to setup "cls_labels.npy" for MS-COCO 2017 dataset. This work is done by [JimmyMa99](https://github.com/JimmyMa99/coco17-get-cls_label/tree/main) and please see [the codes](https://github.com/JimmyMa99/coco17-get-cls_label/tree/main).
 
 ### Classification network  
 - Execute the bash file for training, inference and evaluation.
