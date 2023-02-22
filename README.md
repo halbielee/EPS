@@ -76,7 +76,7 @@ thereby significantly improving the quality of pseudo-masks.
     - [Segmentation masks](https://drive.google.com/file/d/1XJF2xIC1-Y1lPJ9f3FFeSg5aaOWqrRME/view?usp=sharing)
 
 - Pretrained models
-    - [ImageNet-pretrained Model](https://drive.google.com/file/d/15F13LEL5aO45JU-j45PYjzv5KW5bn_Pn/view?usp=sharing) 
+    - [ImageNet-pretrained Model](https://drive.google.com/file/d/1WvSkPfAtfPzyxcgG58a1RlRayMYb3FBc/view?usp=share_link) 
       for [ResNet38](https://arxiv.org/abs/1611.10080)
 
 - MS-COCO 2017
