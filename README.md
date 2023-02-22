@@ -46,6 +46,8 @@ thereby significantly improving the quality of pseudo-masks.
 
 15 Apr, 2022: Minor update on information about the method setting up 'cls_labels.npy' the for ms-coco 17 dataset
 - Please see the issue: [coco17](https://github.com/halbielee/EPS/issues/13)
+
+22 Feb, 2023: Minor update on the download link for coco dataset (Masks, Saliency maps)
 ## Installation
 
 
@@ -69,9 +71,9 @@ thereby significantly improving the quality of pseudo-masks.
 
 - MS-COCO 2014
     - [Images](https://cocodataset.org/#home) 
-    - [Saliency maps](https://drive.google.com/file/d/1o50oztQqTc_xZdgpIEvgKD2Xi_HqBFig/view?usp=sharing) 
+    - [Saliency maps](https://drive.google.com/file/d/1d28NKIXQA6lHDt6iIOD8cyySMQ66GoaS/view?usp=sharing) 
       using [PFAN](https://arxiv.org/abs/1903.00179)
-    - [Segmentation masks](https://drive.google.com/file/d/16wuPinx0rdIP_PO0uYeCn9rfX2-evc-S/view?usp=sharing)
+    - [Segmentation masks](https://drive.google.com/file/d/1XJF2xIC1-Y1lPJ9f3FFeSg5aaOWqrRME/view?usp=sharing)
 
 - Pretrained models
     - [ImageNet-pretrained Model](https://drive.google.com/file/d/15F13LEL5aO45JU-j45PYjzv5KW5bn_Pn/view?usp=sharing) 
